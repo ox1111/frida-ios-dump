@@ -222,5 +222,3 @@ please open the application before dumping.
 - 지정된 경로의 모든 동적 라이브러리를 로드합니다.
 - `loadAllDynamicLibrary(app_path)` 형식으로 사용합니다.
 
-이 스크립트는 iOS 애플리케이션의 바이너리와 관련된 정보를 덤프하고 분석하는 데 유용합니다. 각 함수는 특정 작업을 수행하기 위한 빌딩 블록으로 사용됩니다.
-
