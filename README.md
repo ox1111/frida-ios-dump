@@ -4,12 +4,25 @@ Pull a decrypted IPA from a jailbroken device
 
 ## Usage
 
- 1. Install [frida](http://www.frida.re/) on device
- 2. `sudo pip install -r requirements.txt --upgrade`
- 3. Run usbmuxd/iproxy SSH forwarding over USB (Default 2222 -> 22). e.g. `iproxy 2222 22`
- 4. Run ./dump.py `Display name` or `Bundle identifier`
+frida 설치
+[frida](http://www.frida.re/) frida 설치
+pip install frida-tools 나 pip3 install frida-tools 실행
+
+
+ 3. `sudo pip install -r requirements.txt --upgrade`
+ 4. Run usbmuxd/iproxy SSH forwarding over USB (Default 2222 -> 22). e.g. `iproxy 2222 22`
+ 5. Run ./dump.py `Display name` or `Bundle identifier`
 
 For SSH/SCP make sure you have your public key added to the target device's ~/.ssh/authorized_keys file.
+
+
+[+] dump.py 실행했는데 gadget-ios.dylib 없다고 에러나면 
+frida 홈페이지가서 frida-gadget-16.2.1-ios-universal.dylib 받고 
+해당 파일을 /Users/hacker/.cache/frida/gadget-ios.dylib로 rename해서 복사한다.
+
+[+] frida-ps -Us 실행안되고 에러 떨어지면
+xcode 12.4기준 xcode 실행해서 windows->devices and simulators 에 가서 폰 연결 확인
+
 
 ```
 ./dump.py Aftenposten
