@@ -62,12 +62,17 @@ rm -rf /Users/hacker/.ssh
 ```
 
 [+] dump.py 실행했는데 gadget-ios.dylib 없다고 에러나면 
+```
+https://github.com/frida/frida/releases
+
+
 frida 홈페이지가서 frida-gadget-16.2.1-ios-universal.dylib 받고 
 해당 파일을 /Users/hacker/.cache/frida/gadget-ios.dylib로 rename해서 복사한다.
-
+```
 [+] frida-ps -Us 실행안되고 에러 떨어지면
+```
 xcode 12.4기준 xcode 실행해서 windows->devices and simulators 에 가서 폰 연결 확인
-
+```
 
 Drag to [MonkeyDev](https://github.com/AloneMonkey/MonkeyDev), Happy hacking!
 
