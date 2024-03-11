@@ -23,6 +23,13 @@ pip3 install frida-tools
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+[+] iproxy 설치
+```
+brew install usbmuxd
+```
+
+ 
 [+] frida-ios-dump 다운로드 
 ```
 git clone https://github.com/ox1111/frida-ios-dump.git
