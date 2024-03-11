@@ -5,7 +5,7 @@
 - Review other people's research
 
 
-[시연동영상]([https://www.youtube.com/watch?v=abcdefgh](https://youtu.be/KRnFbUGqYsM?si=oikvfjJJxTHZ0SR0))
+[시연동영상](https://www.youtube.com/watch?v=KRnFbUGqYsM)
 
 
 ## Usage
