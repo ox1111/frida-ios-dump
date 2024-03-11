@@ -93,7 +93,7 @@ please open the application before dumping.
 
 
 
-# frida-ios-dump 스크립트 함수 설명
+# frida-ios-dump 스크립트 함수 설명1
 
 이 문서에서는 `frida-ios-dump` 스크립트에 사용된 주요 함수들의 기능을 설명합니다.
 
@@ -139,7 +139,7 @@ please open the application before dumping.
   애플리케이션의 모든 모듈을 덤프하고 결과를 전송합니다.
 
 
-# Frida iOS Dump Script 설명
+# Frida iOS Dump Script 설명2
 
 이 문서는 iOS 애플리케이션을 덤프하기 위한 Frida 스크립트의 전체 흐름과 각 함수의 기능을 설명합니다.
 
