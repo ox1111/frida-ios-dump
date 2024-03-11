@@ -4,10 +4,14 @@ Pull a decrypted IPA from a jailbroken device
 
 ## Usage
 
-frida 설치
+[+] frida 설치
 [frida](http://www.frida.re/) frida 설치
-pip install frida-tools 나 pip3 install frida-tools 실행
-
+```
+pip install frida-tools
+```
+```
+pip3 install frida-tools
+```
 
  3. `sudo pip install -r requirements.txt --upgrade`
  4. Run usbmuxd/iproxy SSH forwarding over USB (Default 2222 -> 22). e.g. `iproxy 2222 22`
