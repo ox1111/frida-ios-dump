@@ -13,12 +13,48 @@ pip install frida-tools
 pip3 install frida-tools
 ```
 
- 3. `sudo pip install -r requirements.txt --upgrade`
- 4. Run usbmuxd/iproxy SSH forwarding over USB (Default 2222 -> 22). e.g. `iproxy 2222 22`
- 5. Run ./dump.py `Display name` or `Bundle identifier`
+[+] 사용할 기본 라이브러리 설치
 
-For SSH/SCP make sure you have your public key added to the target device's ~/.ssh/authorized_keys file.
+```sudo pip install -r requirements.txt --upgrade```
 
+[+] brew 설치
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+[+] frida-ios-dump 다운로드 
+```
+git clone https://github.com/ox1111/frida-ios-dump.git
+cd frida-ios-dump
+```
+[+] iproxy 설정
+```
+iproxy 2222(mac에서 연결할 port ) -> 22(iphone에서 열어놓은 port )
+    mac 2222 port -> iphone 22
+
+iproxy 2222 22
+```
+
+[+] frida-ps
+```
+frida-ps -Ua | grep Cyder
+```
+
+[+] frida-ps
+```
+실행했는데 holing한다면 수동으로 앱을 한번 실행하면 동작한다.
+
+python3 dump.py com.saurik.Cydia
+
+```
+
+[+] ssh 확인사항
+```
+SSH/SCP의 경우 대상 디바이스의 ~/.ssh/authorized_keys 파일에 공개키가 추가되어 있는지 확인
+
+삭제하고 싶을 때 위치
+rm -rf /Users/hacker/.ssh
+```
 
 [+] dump.py 실행했는데 gadget-ios.dylib 없다고 에러나면 
 frida 홈페이지가서 frida-gadget-16.2.1-ios-universal.dylib 받고 
@@ -27,33 +63,6 @@ frida 홈페이지가서 frida-gadget-16.2.1-ios-universal.dylib 받고
 [+] frida-ps -Us 실행안되고 에러 떨어지면
 xcode 12.4기준 xcode 실행해서 windows->devices and simulators 에 가서 폰 연결 확인
 
-
-```
-./dump.py Aftenposten
-Start the target app Aftenposten
-Dumping Aftenposten to /var/folders/wn/9v1hs8ds6nv_xj7g95zxyl140000gn/T
-start dump /var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/AftenpostenApp
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/AFNetworking.framework/AFNetworking
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/ATInternet_iOS_ObjC_SDK.framework/ATInternet_iOS_ObjC_SDK
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/SPTEventCollector.framework/SPTEventCollector
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/SPiDSDK.framework/SPiDSDK
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftCore.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftCoreData.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftCoreGraphics.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftCoreImage.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftCoreLocation.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftDarwin.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftDispatch.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftFoundation.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftObjectiveC.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftQuartzCore.dylib
-start dump /private/var/containers/Bundle/Application/66423A80-0AFE-471C-BC9B-B571107D3C27/AftenpostenApp.app/Frameworks/libswiftUIKit.dylib
-Generating Aftenposten.ipa
-
-Done.
-```
-
-Congratulations!!! You've got a decrypted IPA file.
 
 Drag to [MonkeyDev](https://github.com/AloneMonkey/MonkeyDev), Happy hacking!
 
