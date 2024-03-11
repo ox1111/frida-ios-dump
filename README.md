@@ -38,7 +38,7 @@ iproxy 2222 22
 
 [+] frida-ps
 ```
-frida-ps -Ua | grep Cyder
+frida-ps -Ua | grep Cydia
 ```
 
 [+] frida-ps
