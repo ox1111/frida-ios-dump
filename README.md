@@ -1,6 +1,5 @@
 # frida-ios-dump
-Pull a decrypted IPA from a jailbroken device
-
+jailbreak된 폰에서 복호화된 ipa 가져오기
 
 ## Usage
 
