@@ -1,6 +1,6 @@
-# frida-ios-dump
-jailbreak된 폰에서 복호화된 ipa 가져오기
-
+# [ frida-ios-dump:;남의 연구 리뷰 ] 
+: jailbreak된 폰에서 복호화된 ipa 가져오기
+- 저작가 쓴 내용에 번역이나 필요한 내용 적어둠
 ## Usage
 
 [+] frida 설치
