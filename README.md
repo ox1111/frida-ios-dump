@@ -49,12 +49,16 @@ python3 dump.py com.saurik.Cydia
 
 ```
 
-[+] ssh 확인사항
+[+] ssh 연결
 ```
 SSH/SCP의 경우 대상 디바이스의 ~/.ssh/authorized_keys 파일에 공개키가 추가되어 있는지 확인
 
+ssh -p 2222 root@localhost
+root/alpine
+
 삭제하고 싶을 때 위치
 rm -rf /Users/hacker/.ssh
+
 ```
 
 [+] dump.py 실행했는데 gadget-ios.dylib 없다고 에러나면 
