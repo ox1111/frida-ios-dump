@@ -3,6 +3,10 @@
 - 아들 교육용
 - 저작가 쓴 내용에 번역이나 필요한 내용 적어둠
 - Review other people's research
+
+
+https://youtu.be/KRnFbUGqYsM?si=oikvfjJJxTHZ0SR0
+
 ## Usage
 
 [+] frida 설치
